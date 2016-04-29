@@ -48,6 +48,7 @@ dependencies:
   - inline_entity_form
   - state_machine
   - commerce
+  - commerce_checkout
   - commerce_cart
   - commerce_order
   - commerce_product
