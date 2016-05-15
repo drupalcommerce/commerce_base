@@ -2,6 +2,6 @@
   "name": "drupalcommerce/commerce_base",
   "type": "drupal-profile",
   "description": "Commerce 2.x installation profile",
-  "homepage": "httsp://github.com/drupalcommerce/commerce_base",
+  "homepage": "https://github.com/drupalcommerce/commerce_base",
   "license": "GPL-2.0+"
 }
