@@ -55,6 +55,9 @@ dependencies:
   - commerce_price
   - commerce_store
   - commerce_tax
+
+  # Contrib
+  - admin_toolbar
 themes:
   - bartik
   - seven
