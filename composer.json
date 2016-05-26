@@ -3,5 +3,14 @@
   "type": "drupal-profile",
   "description": "Commerce 2.x installation profile",
   "homepage": "https://github.com/drupalcommerce/commerce_base",
-  "license": "GPL-2.0+"
+  "license": "GPL-2.0+",
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "require": {
+    "drupal/admin_toolbar": "^1.15"
+  }
 }
