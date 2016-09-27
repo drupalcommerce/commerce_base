@@ -54,7 +54,8 @@ dependencies:
   - commerce_product
   - commerce_price
   - commerce_store
-  - commerce_tax
+  - commerce_payment
+  - commerce_promotion
 themes:
   - bartik
   - seven
