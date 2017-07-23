@@ -60,6 +60,7 @@ dependencies:
   - commerce_tax
   
   # Contrib
+  - admin_toolbar
   - swiftmailer
 themes:
   - bartik
