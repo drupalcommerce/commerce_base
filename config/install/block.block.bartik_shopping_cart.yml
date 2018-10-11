@@ -5,7 +5,7 @@ dependencies:
     - commerce_cart
   theme:
     - bartik
-id: shopping_cart
+id: bartik_shopping_cart
 theme: bartik
 region: header
 weight: null
