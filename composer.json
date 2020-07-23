@@ -7,6 +7,6 @@
   "require": {
       "drupal/commerce": "^2.0",
       "drupal/admin_toolbar": "^2.0",
-      "drupal/swiftmailer": "^1.0"
+      "drupal/swiftmailer": "^2.0"
     }
 }
