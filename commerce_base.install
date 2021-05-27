@@ -6,7 +6,7 @@
  */
 
 use Drupal\user\Entity\User;
-use Drupal\user\RoleInterface;
+use Drupal\shortcut\Entity\Shortcut;
 
 /**
  * Implements hook_install().
@@ -16,34 +16,25 @@ use Drupal\user\RoleInterface;
  * @see system_install()
  */
 function commerce_base_install() {
-  // Set front page to "node".
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
-
-  // Allow visitor account creation with administrative approval.
-  $user_settings = \Drupal::configFactory()->getEditable('user.settings');
-  $user_settings->set('register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)->save(TRUE);
-
-  // Enable default permissions for system roles.
-  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['access comments']);
-  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access comments', 'post comments', 'skip comment approval']);
-
   // Assign user 1 the "administrator" role.
   $user = User::load(1);
   $user->roles[] = 'administrator';
   $user->save();
 
-  // Enable the Contact link in the footer menu.
-  /** @var \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager */
-  $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-  $menu_link_manager->updateDefinition('contact.site_page', ['enabled' => TRUE]);
+  // Populate the default shortcut set.
+  $shortcut = Shortcut::create([
+    'shortcut_set' => 'default',
+    'title' => t('Add content'),
+    'weight' => -20,
+    'link' => ['uri' => 'internal:/node/add'],
+  ]);
+  $shortcut->save();
 
-  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['access site-wide contact form']);
-  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access site-wide contact form']);
-
-  // Allow all users to use search.
-  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['search content']);
-  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['search content']);
-
-  // Enable the admin theme.
-  \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+  $shortcut = Shortcut::create([
+    'shortcut_set' => 'default',
+    'title' => t('All content'),
+    'weight' => -19,
+    'link' => ['uri' => 'internal:/admin/content'],
+  ]);
+  $shortcut->save();
 }
