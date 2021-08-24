@@ -26,7 +26,6 @@ dependencies:
   - menu_ui
   - options
   - path
-  - page_cache
   - dynamic_page_cache
   - taxonomy
   - dblog
