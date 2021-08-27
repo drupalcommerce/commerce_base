@@ -5,8 +5,8 @@
   "homepage": "https://github.com/drupalcommerce/commerce_base",
   "license": "GPL-2.0+",
   "require": {
-      "drupal/commerce": "^2.0",
-      "drupal/admin_toolbar": "^2.0",
+      "drupal/commerce": "^2.26",
+      "drupal/admin_toolbar": "^3.2",
       "drupal/swiftmailer": "^2.0"
     }
 }
