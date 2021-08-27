@@ -6,7 +6,7 @@
   "license": "GPL-2.0+",
   "require": {
       "drupal/commerce": "^2.26",
-      "drupal/admin_toolbar": "^3.2",
+      "drupal/admin_toolbar": "^3.0",
       "drupal/swiftmailer": "^2.0"
     }
 }
