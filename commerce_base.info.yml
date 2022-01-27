@@ -59,7 +59,7 @@ dependencies:
 
   # Contrib
   - admin_toolbar:admin_toolbar
-  - swiftmailer:swiftmailer
+  - symfony_mailer:symfony_mailer
 themes:
   - bartik
   - seven
