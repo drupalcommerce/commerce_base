@@ -15,7 +15,6 @@ dependencies:
   - config
   - comment
   - contextual
-  - contact
   - menu_link_content
   - datetime
   - block_content
@@ -60,6 +59,8 @@ dependencies:
   # Contrib
   - admin_toolbar:admin_toolbar
   - symfony_mailer:symfony_mailer
+install:
+  - contact
 themes:
   - bartik
   - seven
