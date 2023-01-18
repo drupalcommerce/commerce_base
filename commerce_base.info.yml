@@ -1,6 +1,5 @@
 name: Commerce Base
 type: profile
-core_version_requirement: ^9
 description: 'Install with Drupal Commerce pre-configured.'
 distribution:
   name: 'Drupal'

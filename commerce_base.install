@@ -17,6 +17,6 @@ use Drupal\user\Entity\User;
 function commerce_base_install() {
   // Assign user 1 the "administrator" role.
   $user = User::load(1);
-  $user->roles[] = 'administrator';
+  $user->addRole('administrator');
   $user->save();
 }
