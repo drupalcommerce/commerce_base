@@ -10,7 +10,7 @@ dependencies:
   - history
   - block
   - breakpoint
-  - ckeditor
+  - ckeditor5
   - color
   - config
   - comment
